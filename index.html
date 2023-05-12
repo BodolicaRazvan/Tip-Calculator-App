@@ -8,7 +8,57 @@
     <title>Tip Calculator</title>
 </head>
 <body>
+    <div class="container">
+        <div class="display">
 
+            <h1>Tip calculator</h1>
+
+            <div class="bill-amount">
+                <label for="price">Bill amount</label>
+                <div class="icon-input">
+                    <button><img src="/images/dollar.png" alt="dollar-icon"></button>
+                    <input type="text" id="price">
+                </div>
+            </div>
+            
+            <div class="tip-amount">
+                <label for="tip">Tip amount</label>
+                <div class="icon-input">
+                    <button><img src="/images/percent.png" alt="percent-icon"></button>
+                    <input type="text" id="tip">
+                </div>
+            </div>
+
+            <div class="number-of-people">
+                <label for="guests">Number of people</label>
+                <div class="icon-input">
+                    <button><img src="/images/guests.png" alt="guests-icon"></button>
+                    <input type="text" id="guests">
+                </div>
+            </div>
+
+            <div class="calculate-clear">
+                <button id="calculate">Calculate</button>
+                <button id="clear">Clear</button>
+            </div>
+
+            <div class="result">
+                <h2>Result:</h2>
+                <div class="tip">
+                  <p class="left-p">Tip:</p><p class="right-p" id="tip-result">82$</p> 
+                </div>
+                <div class="total-amount">
+                    <p class="left-p">Total amount:</p><p class="right-p" id="total-amount-result">112$</p>
+                </div>
+                <div class="tip-person">
+                    <p class="left-p">Tip per person:</p><p class="right-p" id="tip-person-result">423$</p>
+                </div>
+                <div class="total-person">
+                    <p class="left-p">Total per person:</p><p class="right-p" id="total-person-result">6$</p>
+                </div>
+            </div>
+        </div>
+    </div>
 <script src="action.js"></script>   
 </body>
 </html>

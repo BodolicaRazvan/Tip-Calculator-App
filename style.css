@@ -1,3 +1,107 @@
-p{
-    color: red;
+:root {
+    --main-grey: #495057;
+    --main-white: #DEE2E6;
+    --egual-yellow: #FFC300;
+    --second-grey: #6C757D;
+    --calm-black: #1D1B26;
+
+    --main-fs: 1.2rem;
+
+    --main-padding: 15px;
+    --second-padding : 8px
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    background-color: var(--calm-black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display{
+    background-color: var(--main-grey);
+    color: var(--main-white);
+    width: 400px;
+    padding: var(--main-padding);
+    font-size: var(--main-fs);
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.4);
+}
+
+h1, h2, .calculate-clear{
+    text-align: center;
+    padding: var(--second-padding);
+}
+
+.display > div{
+    padding: var(--main-padding);
+}
+
+.icon-input, .tip, .total-amount, .tip-person, .total-person{
+    display: flex;
+    padding: var(--second-padding) 0px;
+}
+
+.tip, .total-amount, .tip-person, .total-person{
+    border-bottom: 1px solid var(--main-white);
+}
+
+input{
+    width: 90%;
+    padding: var(--second-padding);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    border-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+button{
+    width: 10%;
+    padding: var(--second-padding);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+}
+
+button img{
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+}
+
+.calculate-clear button{
+   width: fit-content;
+   font-size: var(--main-fs);
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+
+.result{
+    /* display: none; */
+    background-color: #32383d;
+    border: 1px solid var(--second-grey);
+    font-size: var(--main-fs);
+}
+
+.left-p{
+    width: 50%;
+    text-align:  left;
+}
+
+.right-p{
+    width: 50%;
+    text-align: right;
 }
