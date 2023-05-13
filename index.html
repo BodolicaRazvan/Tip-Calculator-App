@@ -14,35 +14,38 @@
             <h1>Tip calculator</h1>
 
             <div class="bill-amount">
-                <label for="price">Bill amount</label>
+                <label for="bill">Bill amount</label>
                 <div class="icon-input">
                     <button><img src="/images/dollar.png" alt="dollar-icon"></button>
-                    <input type="text" id="price">
+                    <input type="number" class="spin-box" id="bill">
                 </div>
+                <p class="alert" id="alert-bill"></p>
             </div>
             
             <div class="tip-amount">
                 <label for="tip">Tip amount</label>
                 <div class="icon-input">
                     <button><img src="/images/percent.png" alt="percent-icon"></button>
-                    <input type="text" id="tip">
+                    <input type="number" class="spin-box" id="tip">
                 </div>
+                <p class="alert" id="alert-tip"></p>
             </div>
 
             <div class="number-of-people">
                 <label for="guests">Number of people</label>
                 <div class="icon-input">
                     <button><img src="/images/guests.png" alt="guests-icon"></button>
-                    <input type="text" id="guests">
+                    <input type="number" id="guests" value="1">
                 </div>
+                <p class="alert" id="alert-guests"></p>
             </div>
 
             <div class="calculate-clear">
-                <button id="calculate">Calculate</button>
-                <button id="clear">Clear</button>
+                <button type="submit" id="calculate" onclick="calculate()">Calculate</button>
+                <button id="clear" onclick="cl()">Clear</button>
             </div>
 
-            <div class="result">
+            <div class="result" id="result-container">
                 <h2>Result:</h2>
                 <div class="tip">
                   <p class="left-p">Tip:</p><p class="right-p" id="tip-result">82$</p> 

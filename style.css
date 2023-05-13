@@ -1,11 +1,11 @@
 :root {
     --main-grey: #495057;
     --main-white: #DEE2E6;
-    --egual-yellow: #FFC300;
     --second-grey: #6C757D;
-    --calm-black: #1D1B26;
+    --bg-black: #1D1B26;
 
     --main-fs: 1.2rem;
+    --second-fs: 1rem;
 
     --main-padding: 15px;
     --second-padding : 8px
@@ -20,7 +20,7 @@
 }
 
 .container{
-    background-color: var(--calm-black);
+    background-color: var(--bg-black);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -39,6 +39,7 @@
 }
 
 h1, h2, .calculate-clear{
+    color: white;
     text-align: center;
     padding: var(--second-padding);
 }
@@ -73,7 +74,7 @@ button{
     border-radius: 5px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    cursor: pointer;
+    cursor: default;
 }
 
 button img{
@@ -85,12 +86,19 @@ button img{
 .calculate-clear button{
    width: fit-content;
    font-size: var(--main-fs);
+   cursor: pointer;
+   border: 0px;
    border-top-right-radius: 5px;
    border-bottom-right-radius: 5px;
 }
 
+.calculate-clear button:hover{
+    transform: translateY(-1px);
+    transition: 0.45;
+}
+
 .result{
-    /* display: none; */
+    display: none;
     background-color: #32383d;
     border: 1px solid var(--second-grey);
     font-size: var(--main-fs);
@@ -105,3 +113,15 @@ button img{
     width: 50%;
     text-align: right;
 }
+
+.alert{
+    color: rgb(238, 63, 63);
+    font-size: var(--second-fs);
+}
+
+/* 
+Get rid of input's spin box */
+.spin-box::-webkit-outer-spin-button, .spin-box::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
